@@ -14,6 +14,20 @@
     <div id="post"></div>
 
     <script>
-        // ...
+        function show(id, dados) {
+            const texto = JSON.stringify(dados) 
+            document.getElementById(id).innerHTML = texto
+        }
+
+        $.ajax({
+            url: 'parOuImpar',
+            data: {
+                numero: 5
+            },
+            success(data) {
+                show('get', data)
+            }
+        })
+
     </script>
 </body>

@@ -40,7 +40,9 @@
 
             const options = {
                 method: form.method,
-                body: new URLSearchParams(data)
+                //body: new URLSearchParams(data)
+                body: document.querySelector('form'),
+                "Content-Type": "application/x-www-form-urlencoded"
             }
 
             fetch(form.action, options)
